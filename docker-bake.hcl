@@ -13,6 +13,8 @@ group "default" {
 }
 
 target "pytorch_transformers" {
+  file = "pytorch_transformers/Dockerfile"
+  context = "pytorch_transformers"
   tags = [
     "${REGISTRY}/pytorch_transformers:${GITHUB_SHA}",
   ]
